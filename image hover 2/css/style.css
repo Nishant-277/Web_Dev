@@ -1,0 +1,91 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color:#0A2647;
+
+}
+
+.border {
+  height: 365px;
+  width: 290px;
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
+}
+
+.border:hover {
+  border: 2px solid white;
+}
+
+.card {
+  height: 375px;
+  width: 300px;
+  background: grey;
+  border-radius: 10px;
+  transition: background 0.8s;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card0 {
+  background: url('https://i.pinimg.com/564x/a6/48/2c/a6482c5fca303f6b23957b81564e9410.jpg') center center no-repeat;
+  background-size: 300px;
+}
+
+.card0:hover {
+  background: url('https://i.pinimg.com/564x/a6/48/2c/a6482c5fca303f6b23957b81564e9410.jpg') left center no-repeat;
+  background-size: 600px;
+}
+
+.card0:hover h2,
+.card0:hover .fa {
+  opacity: 1;
+}
+
+
+h2 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: white;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.fa {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.icons {
+  position: absolute;
+  fill: #fff;
+  color: #fff;
+  height: 130px;
+  top: 226px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index:999;
+}
+.icons i{
+  transition : transform .75s ease;
+}
+.icons i:hover{
+  transform:scale(1.5);
+  cursor: pointer;
+}

@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #43586b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  gap: 3rem;
+}
+
+.card {
+  position: relative;
+  width: 280px;
+  aspect-ratio: 3/4;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: 0.7s ease;
+}
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card .text {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  transform: translateY(-50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+.card .text h2 {
+  text-transform: uppercase;
+  transform: translateY(30px);
+  opacity: 0;
+  margin-bottom: 8px;
+  transition: 0.3s ease-out 0.3s;
+}
+.card:hover .text h2 {
+  transform: translateY(0);
+  opacity: 1;
+}
+.card:hover:nth-child(1) .text h2 {
+  color: #ff7f50;
+}
+.card:hover:nth-child(2) .text h2 {
+  color: #56ffe5;
+}
+.card .text p {
+  font-size: 14px;
+  font-weight: 300;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: 0.5s ease-out 0.3s;
+}
+.card:hover .text p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: all 0.5s cubic-bezier(0.66, 0.08, 0.19, 0.97);
+}
+.card::after {
+  top: 50%;
+  transition-delay: 0.2s;
+}
+.card:hover::after,
+.card:hover::before {
+  transform: scale(1);
+}

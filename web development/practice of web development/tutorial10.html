@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* <p> is an element selector */
+        /* #redElement is a id selector */
+        /* # is used for id */
+        /* . is used for class */
+        /* In this sesion we saw a many things like:
+        1. Element selectors
+        2. ID selectors
+        3. CLASS selectors
+        4. Grouping selectors */
+
+
+        /* 1. ELEMENT Selectors */
+        p {
+            border: 3px solid blueviolet;
+        }
+
+        /* 2. ID Selectors */
+        #firstpara {
+            color: green;
+        }
+
+        /* 3. CLASS Selectors */
+        .bgcolor {
+            color: yellow;
+            background-color: gray;
+        }
+
+        /* 4. Groupinf selectors */
+        footer,
+        span {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- When  to use ID selectors or CLASS selectors: 
+     ID selector will be used when we are dealing with one element
+     CLASS selector will be used when we are dealind with multiple elements-->
+    <h3>CSS Selectors</h3>
+    <p id="firstpara">This is a simple paragraph to demonstrate CSS Selectors</p>
+    <p id="secondpara" class="redElement bgcolor">This is a another simple paragraph to demonstrate CSS Selectors</p>
+    <div>
+        <p>This is yet simple paragraph inside div to demonstrate CSS Selectors</p>
+        <span>This is Span</span>
+    </div>
+    <footer>This is Footer</footer>
+
+</body>
+
+</html>
